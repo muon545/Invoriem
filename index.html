@@ -1,20 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invoriem</title>
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
-        integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/media.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
 <body>
 
     <header class="header">
@@ -29,6 +24,10 @@
                         <li><a href="#!" class="link">About us</a></li>
                         <li><a href="#!" class="btn">Let’s Talk</a></li>
                     </ul>
+
+                    <button class="nav__btn" id="openMobileNav">
+                        <img src="./img/icons/mobile-nav-btn.svg" alt="Mobile nav">
+                    </button>
                 </nav>
             </div>
 
@@ -63,8 +62,7 @@
                     <h2 class="title">Case Studies</h2>
                 </div>
                 <div class="case-studies__text text">
-                    <p>We deliver a unique and truly bespoke approach to delivering international developments to
-                        market, with over 10 years success around the world.</p>
+                    <p>We deliver a unique and truly bespoke approach to delivering international developments to market, with over 10 years success around the world.</p>
                 </div>
             </div>
 
@@ -93,25 +91,38 @@
 
             </div>
         </section>
+
         <section class="about">
             <div class="container">
-                <div class="about_title">
+
+                <div class="about__title">
                     <h2 class="title">We are Invoriem</h2>
                 </div>
-                <div class="about_text text">
+
+                <div class="about__text text">
                     <p>We fulfill international property developments</p>
                 </div>
 
                 <div class="about__content">
+
+                    <!-- video -->
                     <div class="video video-overlay">
                         <button class="video__btn" id="video-btn">
-                            <img src="./img/icons/btn-play.svg" alt="play">
+                            <img src="./img/icons/btn-play.svg" alt="Play">
                         </button>
-                        <img class="video__picture" src="./img/video-picture.jpg" alt="">
+
+                        <picture class="video__picture">
+                            <source media="(max-width: 600px)" srcset="./img/video-picture-mobile.jpg">
+                            <img src="./img/video-picture.jpg" alt="Preview">
+                        </picture>
+
+
                         <video class="video__object" id="video-file" loop>
                             <source src="./img/video.mp4" type="video/mp4">
                         </video>
                     </div>
+                    <!-- video -->
+
                 </div>
             </div>
         </section>
@@ -124,31 +135,62 @@
                 <div class="footer__nav">
                     <div class="footer__email"><a href="mailto:info@invoriem.com">info@invoriem.com</a></div>
                     <div class="footer__socials">
-                        <a href="#!" class="social-icon">
-                            <img src="./img/socials/instagram.svg" alt="instagram">
-                        </a>
-                        <a href="#!" class="social-icon">
-                            <img src="./img/socials/facebook.svg" alt="instagram">
-                        </a>
-                        <a href="#!" class="social-icon">
-                            <img src="./img/socials/linkedIn.svg" alt="instagram">
-                        </a>
-                        <a href="#!" class="social-icon">
-                            <img src="./img/socials/twitter.svg" alt="instagram">
-                        </a>
+                        <a href="#!" class="social-icon"><img src="./img/socials/instagram.svg" alt="Link"></a>
+                        <a href="#!" class="social-icon"><img src="./img/socials/facebook.svg" alt="Link"></a>
+                        <a href="#!" class="social-icon"><img src="./img/socials/twitter.svg" alt="Link"></a>
+                        <a href="#!" class="social-icon"><img src="./img/socials/linkedIn.svg" alt="Link"></a>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
-        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
-        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <section class="mobile-nav none" id="mobileNav">
+
+        <div class="mobile-nav__header">
+            <a href="#">
+                <img class="mobile-nav__logo" src="./img/logo.svg" alt="Logo">
+            </a>
+            <button class="mobile-nav__btn" id="closeMobileNav">
+                <img src="./img/icons/mobile-nav-btn.svg" alt="Close nav">
+            </button>
+        </div>
+
+        <nav class="mobile-list">
+            <ul>
+                <li><a href="#!">Hello</a></li>
+                <li><a href="#!">Bonjour</a></li>
+                <li><a href="#!">Olá</a></li>
+                <li><a href="#!">Marhabaan</a></li>
+            </ul>
+        </nav>
+
+        <div class="mobile-contacts">
+            <h4 class="mobile-contacts__title">Contact us</h4>
+            <a href="mailto:info@invoriem.com" class="mobile-contacts__email">info@invoriem.com</a>
+            <a href="tel:+55512345258" class="mobile-contacts__phone">+555 1234 52 58</a>
+            <address class="mobile-contacts__address">
+                3517 W. Gray St.<br>
+                Utica, Pennsylvania<br>
+                57867
+            </address>
+        </div>
+
+        <footer class="mobile-footer">
+            <a class="mobile-footer__email" href="mailto:info@invoriem.com">info@invoriem.com</a>
+
+            <div class="mobile-socials">
+                <a href="#!"><img src="./img/socials/instagram.svg" alt="Link"></a>
+                <a href="#!"><img src="./img/socials/facebook.svg" alt="Link"></a>
+                <a href="#!"><img src="./img/socials/twitter.svg" alt="Link"></a>
+                <a href="#!"><img src="./img/socials/linkedIn.svg" alt="Link"></a>
+            </div>
+
+            <p class="mobile-footer__copyright">Copyright © 2020 Invoriem</p>
+        </footer>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./js/main.js"></script>
 </body>
-
 </html>
